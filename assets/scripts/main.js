@@ -11,7 +11,7 @@ const resetDataBtn = document.querySelector(".reset-data-btn");
 const flyBtn = document.querySelector(".fly-button");
 
 const gravity = 0.35;
-let speed = 4;
+let speed = 2;
 let gameDificulty = 1;
 let score = 0;
 let highScore = 0;
@@ -29,7 +29,7 @@ function resetData() {
 
 function restartGame() {
 	game = "Start";
-	speed = 4;
+	speed = 2;
 	gameDificulty = 1;
 	score = 0;
 	scoreBox.innerHTML = `Score: ${score}`;
@@ -65,7 +65,7 @@ function playGame() {
 	document.querySelector(".start-prompt").classList.add("hidden");
 	let pipeOpening = 30;
 	let pipeInterval = 0;
-	let pipeDistance = 200;
+	let pipeDistance = 250;
 
 	/////////////////////////////////
 
@@ -171,12 +171,12 @@ function playGame() {
 	function upMove(e) {
 		if (e.code == "Space") {
 			bird.src = "assets/images/bluebird-downflap.png";
-			birdDeltaYPosition = -8;
+			birdDeltaYPosition = -7.5;
 		}
 	}
 	function upClickMove() {
 		bird.src = "assets/images/bluebird-downflap.png";
-		birdDeltaYPosition = -8;
+		birdDeltaYPosition = -7.5;
 	}
 
 	function downMove(e) {
