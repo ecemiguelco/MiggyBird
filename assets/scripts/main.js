@@ -151,9 +151,9 @@ function playGame() {
 
 		birdDeltaYPosition = birdDeltaYPosition + gravity;
 		document.addEventListener("keydown", upMove, { once: true });
-		flyBtn.addEventListener("mousedown", upClickMove);
+		document.addEventListener("mousedown", upClickMove);
 		document.addEventListener("keyup", downMove, { once: true });
-		flyBtn.addEventListener("mouseup", downClickMove);
+		document.addEventListener("mouseup", downClickMove);
 
 		bird.style.top = birdSpecs.top + birdDeltaYPosition + "px";
 		birdSpecs = bird.getBoundingClientRect();
