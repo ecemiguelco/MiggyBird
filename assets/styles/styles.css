@@ -1,0 +1,148 @@
+* {
+	box-sizing: border-box;
+	user-select: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	font-family: "EightBitDragon";
+}
+
+@font-face {
+	font-family: "NineteenNinetySeven";
+	src: url(../fonts/NineteenNinetySeven-11XB.ttf);
+}
+@font-face {
+	font-family: "EightBitDragon";
+	src: url(../fonts/EightBitDragon-anqx.ttf);
+}
+
+.hidden {
+	display: none;
+}
+
+.game-world {
+	height: 100vh;
+
+	border: 5px solid black;
+}
+
+.background-img {
+	height: 100vh;
+	position: absolute;
+	z-index: -20;
+	background: url(../images/bg-clouds.jpg) no-repeat fixed fixed center;
+}
+
+.start-prompt {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: auto;
+	transform: translate(-50%, -50%);
+}
+
+.bird-image {
+	z-index: 10;
+	height: 100px;
+	position: fixed;
+	top: 10vh;
+	left: 10%;
+}
+
+.pipe-block {
+	position: fixed;
+	top: 40vh;
+	left: 80vw;
+	height: 70vh;
+	width: 200px;
+	border: 1px solid black;
+}
+
+.pipe-img {
+	width: 100%;
+}
+
+.start-prompt {
+	font-size: 4rem;
+	text-align: center;
+	cursor: pointer;
+	z-index: 50;
+}
+
+.score-box {
+	font-size: 2.5rem;
+	position: fixed;
+	width: max-content;
+	right: 10%;
+	top: 5%;
+}
+
+.high-score-box {
+	font-size: 2.5rem;
+	position: fixed;
+	width: max-content;
+	left: 5%;
+	top: 5%;
+}
+
+.play-again-btn {
+	border: 1px solid black;
+	border-radius: 2rem;
+	background-color: white;
+	height: auto;
+	width: max-content;
+	padding: 2rem;
+	font-size: 2.5rem;
+	position: fixed;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+.reset-data-btn {
+	border: 1px solid black;
+	border-radius: 2rem;
+	background-color: white;
+	height: auto;
+	width: max-content;
+	padding: 2rem;
+	font-size: 2.5rem;
+	position: fixed;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+.fly-button {
+	z-index: 30;
+	border: 1px solid black;
+	border-radius: 2rem;
+	background-color: white;
+	height: auto;
+	width: max-content;
+	padding: 2rem;
+	font-size: 2.5rem;
+	position: fixed;
+	top: 85%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+	.score-box {
+		top: 10%;
+	}
+}
+
+.start-prompt:hover {
+	font-size: 4.2rem;
+}
+
+.play-again-btn:hover,
+.reset-data-btn:hover {
+	background-color: goldenrod;
+	font-size: 3rem;
+}
