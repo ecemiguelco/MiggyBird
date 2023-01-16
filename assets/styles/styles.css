@@ -143,6 +143,15 @@
 	font-size: 3rem;
 }
 
+.title {
+	font-size: 1.5rem;
+	color: cornsilk;
+	position: fixed;
+	z-index: 20;
+	top: 95%;
+	left: 2%;
+}
+
 @media only screen and (max-width: 600px) {
 	.score-box {
 		top: 10%;
