@@ -1,7 +1,7 @@
 let bird = document.querySelector(".bird-image");
 let birdSpecs = bird.getBoundingClientRect();
-const background = document.querySelector(".game-world");
-const backgroundSpecs = background.getBoundingClientRect();
+let background = document.querySelector(".game-world");
+let backgroundSpecs = background.getBoundingClientRect();
 const startPrompt = document.querySelector(".start-prompt");
 const scoreBox = document.querySelector(".score-box");
 const highScoreBox = document.querySelector(".high-score-box");
@@ -10,8 +10,8 @@ const playAgainBtn = document.querySelector(".play-again-btn");
 const resetDataBtn = document.querySelector(".reset-data-btn");
 const flyBtn = document.querySelector(".fly-button");
 
-const gravity = 0.35;
-let speed = 2;
+const gravity = 0.25;
+let speed = 3;
 let gameDificulty = 1;
 let score = 0;
 let highScore = 0;
@@ -29,7 +29,7 @@ function resetData() {
 
 function restartGame() {
 	game = "Start";
-	speed = 2;
+	speed = 3;
 	gameDificulty = 1;
 	score = 0;
 	scoreBox.innerHTML = `Score: ${score}`;
@@ -118,6 +118,7 @@ function playGame() {
 					birdSpecs.bottom > pipeSpecs.top &&
 					birdSpecs.left < pipeSpecs.right
 				) {
+					console.log("Collision Over");
 					gameOver();
 					return;
 				} else {
@@ -157,8 +158,9 @@ function playGame() {
 
 		bird.style.top = birdSpecs.top + birdDeltaYPosition + "px";
 		birdSpecs = bird.getBoundingClientRect();
-
+		backgroundSpecs = background.getBoundingClientRect();
 		if (birdSpecs.top < 0 || birdSpecs.bottom + speed >= backgroundSpecs.bottom) {
+			console.log("Out of Bounds Over");
 			gameOver();
 			return;
 		}
@@ -171,12 +173,12 @@ function playGame() {
 	function upMove(e) {
 		if (e.code == "Space") {
 			bird.src = "assets/images/bluebird-downflap.png";
-			birdDeltaYPosition = -7.5;
+			birdDeltaYPosition = -6;
 		}
 	}
 	function upClickMove() {
 		bird.src = "assets/images/bluebird-downflap.png";
-		birdDeltaYPosition = -7.5;
+		birdDeltaYPosition = -6;
 	}
 
 	function downMove(e) {

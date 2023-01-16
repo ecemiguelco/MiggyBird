@@ -43,7 +43,7 @@
 
 .bird-image {
 	z-index: 10;
-	height: 80px;
+	height: 70px;
 	position: fixed;
 	top: 10vh;
 	left: 10%;
@@ -133,6 +133,16 @@
 	cursor: pointer;
 }
 
+.start-prompt:hover {
+	font-size: 4.2rem;
+}
+
+.play-again-btn:hover,
+.reset-data-btn:hover {
+	background-color: goldenrod;
+	font-size: 3rem;
+}
+
 @media only screen and (max-width: 600px) {
 	.score-box {
 		top: 10%;
@@ -168,6 +178,16 @@
 	.pipe-block {
 		width: 120px;
 		height: 74vh;
+	}
+
+	.start-prompt:hover {
+		font-size: 3.3rem;
+	}
+
+	.play-again-btn:hover,
+	.reset-data-btn:hover {
+		background-color: goldenrod;
+		font-size: 2rem;
 	}
 }
 
@@ -212,14 +232,14 @@
 		width: 120px;
 		height: 60vh;
 	}
-}
 
-.start-prompt:hover {
-	font-size: 4.2rem;
-}
+	.start-prompt:hover {
+		font-size: 2.8rem;
+	}
 
-.play-again-btn:hover,
-.reset-data-btn:hover {
-	background-color: goldenrod;
-	font-size: 3rem;
+	.play-again-btn:hover,
+	.reset-data-btn:hover {
+		background-color: goldenrod;
+		font-size: 2rem;
+	}
 }
