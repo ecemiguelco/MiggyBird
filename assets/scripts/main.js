@@ -173,12 +173,12 @@ function playGame() {
   function upMove(e) {
     if (e.code == "Space") {
       bird.src = "assets/images/bluebird-downflap.png";
-      birdDeltaYPosition = -13;
+      birdDeltaYPosition = -10;
     }
   }
   function upClickMove() {
     bird.src = "assets/images/bluebird-downflap.png";
-    birdDeltaYPosition = -13;
+    birdDeltaYPosition = -10;
   }
 
   function downMove(e) {
